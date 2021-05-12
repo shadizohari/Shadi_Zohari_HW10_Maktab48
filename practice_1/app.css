@@ -1,0 +1,106 @@
+body {
+    box-sizing: border-box;
+    background-color: #d1d9d9;
+}
+
+.text-align-right {
+    text-align: right;
+}
+.table{
+    margin-bottom: 0;
+}
+.table-res {
+    margin-top: 15px;
+    overflow-x: auto;
+    background-color: white;
+}
+
+.table th {
+    white-space: nowrap
+}
+
+.noData {
+    text-align: center;
+}
+
+.total {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.total-price,
+.total-tax {
+    width: 45%;
+    padding: 10px 0px;
+    /* color: white; */
+    /* margin: 10px; */
+}
+
+.btn {
+    border: 1px solid black;
+}
+
+.table td {
+    padding: 8px;
+    position: relative;
+}
+
+table td input,
+table td select {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+table td.btnCells {
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    text-align: center;
+}
+
+.fa-cloud-download-alt,
+.fa-undo,
+.fa-pen {
+    color: blue;
+}
+
+.fa-trash {
+    color: red
+}
+
+.total-tax {
+    background-color: #94d0cc;
+}
+
+.total-price {
+    background-color: #eec4c4
+}
+
+/* .total-price{
+    margin-right: 10px;
+}
+.total-tax{
+    margin-left: 10px;
+} */
+
+
+@media only screen and (max-width: 576px) {
+    .total {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .total-price,
+    .total-tax {
+        width: 100%;
+    }
+}

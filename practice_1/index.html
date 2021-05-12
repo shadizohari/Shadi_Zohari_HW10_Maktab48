@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fontawesome-icon/css/all.css">
+    <link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./font-fa/font.css">
+    <link rel="stylesheet" href="./app.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container mt-5" dir="rtl">
+        <div class="total">
+            <div class="total-tax">مالیات کل: <Span>0</Span> ریال </div>
+            <div class="total-price">مبلغ کل: <span>0</span> ریال </div>
+        </div>
+        <button id="addition" class="btn mt-3">+</button>
+        <div class="table-res">
+            <table class="table table-bordered text-align-right">
+                <thead class="thead-light">
+                    <tr>
+                        <th>ردیف</th>
+                        <th>کالا یا خدمات</th>
+                        <th>شرح</th>
+                        <th>واحد</th>
+                        <th>تعداد</th>
+                        <th>مبلغ واحد (ریال)</th>
+                        <th>تخفیف (درصد)</th>
+                        <th>مالیات (ریال)</th>
+                        <th>مبلغ کل (ریال)</th>
+                        <th colspan="2"></th>
+
+                    </tr>
+                </thead>
+
+            </table>
+        </div>
+        <div class="noData mt-3">
+            No Data
+        </div>
+    </div>
+    <script src="jquery.js"></script>
+    <script src="./bootstrap-4.3.1-dist/js/bootstrap.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

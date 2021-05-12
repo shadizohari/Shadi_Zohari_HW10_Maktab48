@@ -1,0 +1,51 @@
+.container {
+    padding: 48px;
+    background-color: #f2f2f2;
+    color: #45A132;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.width-card {
+    width: 200px;
+}
+.text-center {
+    text-align: center;
+}
+
+.img-card{
+    width: 30%;
+}
+
+.margin {
+    margin: 48px;
+}
+@media (max-width: 1280px) { 
+    .margin {
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+ }
+ @media (max-width: 1100px) { 
+    .margin {
+        margin-left: 68px;
+        margin-right: 68px;
+    }
+ }
+ @media (max-width: 992px) { 
+    .margin {
+        margin-left: 68px;
+        margin-right: 68px;
+    }
+ }
+ @media (max-width: 768px) { 
+    .margin {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+ }

@@ -1,0 +1,14 @@
+.containerCircleCard {
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.img-circle{
+    width: 40%;
+}
+.widthCardCircle{
+    width: 30%;
+}

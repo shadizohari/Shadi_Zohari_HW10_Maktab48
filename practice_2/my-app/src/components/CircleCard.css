@@ -1,0 +1,38 @@
+.hadCircleCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* width: 30%; */
+}
+
+.circleCard {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background-color: #FFCA1D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titr {
+    color: #595959;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .circleCard{
+        width: 130px;
+        height: 130px;
+    }
+}
+@media only screen and (max-width: 576px) {
+    .circleCard{
+        width: 150px;
+        height: 150px;
+    }
+    .hadCircleCard {
+        width: 100%;
+    }
+}

@@ -1,0 +1,13 @@
+.btn {
+    padding: .2rem 1rem;
+    border-radius: 25px;
+    border: 1px solid white;
+    transition: all 500ms linear;
+    font-size: 18px;
+}
+
+.btn:hover, .activeBtn {
+    background-color: rgb(69, 161, 50);
+    border: 1px solid #286E19;
+    color: white;
+}
