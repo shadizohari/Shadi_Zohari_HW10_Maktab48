@@ -27,8 +27,10 @@ a {
     border-bottom-left-radius: 0.9rem;
     border-bottom-right-radius: 0.9rem;
 
-
 }
 .displayNone{
     display: none;
+}
+.show{
+    display: block;
 }

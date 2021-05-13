@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #818181;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.title {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.calculator {
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #dfd8d0;
+  border: 2px solid #908b85;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
+          box-shadow: 7px 10px 34px 1px rgba(0, 0, 0, 0.68), inset -1px -6px 12px 0.1px #89847e;
+}
+
+.row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.had-buttons {
+  width: 80%;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.had-buttons .button {
+  cursor: pointer;
+  color: white;
+  border-radius: 8px;
+  border: none;
+  background-color: #3a3a3a;
+  margin: 5px;
+  height: 40px;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+  -webkit-box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+          box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+  outline: none !important;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.had-buttons .button:hover {
+  outline: none !important;
+}
+
+.had-buttons .button:active {
+  outline: none !important;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.had-buttons .button:visited {
+  outline: none !important;
+}
+
+.had-buttons .equalButton {
+  background-color: #12e612;
+  -webkit-box-shadow: 0px 3px 0px 0px #12e612, inset -1px -3px 10px 1px #12e612;
+          box-shadow: 0px 3px 0px 0px #12e612, inset -1px -3px 10px 1px #12e612;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.had-buttons .clear {
+  background-color: blue;
+  -webkit-box-shadow: 0px 3px 0px 0px blue, inset -1px -3px 10px 1px blue;
+          box-shadow: 0px 3px 0px 0px blue, inset -1px -3px 10px 1px blue;
+}
+
+.entrybox {
+  text-align: right;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid #b4b39d;
+  border-radius: 6px;
+  background-color: #c3c2ab;
+}
+
+.entry {
+  margin-right: 10px;
+  font-size: 35px;
+}
+
+.answer {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+/*# sourceMappingURL=main.css.map */

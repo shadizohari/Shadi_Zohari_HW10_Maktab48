@@ -1,0 +1,57 @@
+
+.had-buttons {
+    width: 80%;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    .button {
+        cursor: pointer;
+        color: white;
+        border-radius: 8px;
+        border: none;
+        background-color: #3a3a3a;
+        margin: 5px;
+        height: 40px;
+        flex-basis: 25%;
+        box-shadow: 0px 3px 0px 0px #222121, inset -1px -3px 10px 1px #515151;
+        outline: none !important;
+        transition: all .3s;
+
+        &:hover {
+            outline: none !important;
+
+        }
+
+        &:active {
+            outline: none !important;
+            transform: scale(.9);
+        }
+
+        &:visited {
+            outline: none !important;
+
+        }
+    }
+
+    .equalButton {
+        background-color: rgb(18, 230, 18);
+        box-shadow: 0px 3px 0px 0px rgb(18, 230, 18), inset -1px -3px 10px 1px rgb(18, 230, 18);
+        flex-grow: 1;
+
+    }
+
+    .zeroButton {
+        // flex-grow: 1;
+    }
+
+    .clear {
+        background-color: blue;
+        box-shadow: 0px 3px 0px 0px blue, inset -1px -3px 10px 1px blue;
+        // flex-grow: 1;
+    }
+
+
+}
