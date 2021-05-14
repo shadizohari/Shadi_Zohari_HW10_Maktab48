@@ -53,7 +53,7 @@ function App() {
       text: "x",
       classes: ""
     }, {
-      value: "&divide;",
+      value: "/",
       text: "/",
       classes: ""
     }, {
@@ -83,7 +83,7 @@ function App() {
     operand_2: 0
   })
 
-  const MAX_LENGTH = 8;
+  const MAX_LENGTH = 10;
 
   let reset = function () {
     setState({
@@ -95,78 +95,72 @@ function App() {
     })
   }
 
-  let formatResult = function (result) {
+  function formatResult(result) {
     result = String(result);
     if (result.length > MAX_LENGTH) {
       let dotIndex = result.indexOf(".");
       if (dotIndex < 0 || dotIndex > MAX_LENGTH - 1) {
-        setState({ result: "Error: number too big" })
+        console.log("error")
+        return "Too Large!";
       } else {
-        let x = Number(result).toFixed(MAX_LENGTH - 1 - dotIndex)
-        setState({ result: x })
+        console.log("error2")
+        return Number(result).toFixed(MAX_LENGTH - 1 - dotIndex);
       }
     }
-    setState({
-      result: result
-    })
+    return Number(result)
   }
 
   const onclickHandel = function (value) {
-    // let {
-    //   result,
-    //   flag_do_replace,
-    //   operator,
-    //   operand_1,
-    //   operand_2
-    // } = state;
+    let {
+      result,
+      flag_do_replace,
+      operator,
+      operand_1,
+      operand_2
+    } = state;
 
     // if pressed a number key
     if (!(isNaN(value))) {
-      if (state.flag_do_replace) {
-        setState({
-          result: value,
-          flag_do_replace: false
-        })
+      if (flag_do_replace) {
+        result = value
+        flag_do_replace = false
       } else {
-        console.log("dont replace")
-        console.log(state.flag_do_replace)
-        if (String(state.result).length < MAX_LENGTH) {
-          let newvalue = String(state.result) + String(value)
-          setState({ result: newvalue })
+        if (String(result).length < MAX_LENGTH) {
+          let newvalue = String(result) + String(value)
+          result = newvalue
         }
       }
     } else if (value === "c") {
-      console.log(state)
       reset();
-
+      return true;
     } else if (value === "=") {
-      setState((state, props) => ({
-        operand_2: Number(state.result),
-        operand_1: Number(state.operand_1),
-        operator: state.operator
-      }))
-      if (state.operator == "+") {
-        console.log("ok")
-        formatResult(state.operand_1 + state.operand_2);
-      } else if (state.operator === "-") {
-        formatResult(state.operand_1 - state.operand_2);
-      } else if (state.operator === "*") {
-        formatResult(state.operand_1 * state.operand_2);
-      } else if (state.operator === "/") {
-        formatResult(state.operand_1 / state.operand_2);
-      }
-      reset();
-    } else {
-      setState((state, props) => ({
-        operand_1: Number(state.result),
-        flag_do_replace: true,
-        operator: value,
-        result: state.result,
-        operand_2: null
-      }))
+      operand_2 = Number(result)
 
+      if (operator === "+") {
+        result = Number(operand_1) + Number(operand_2);
+      } else if (operator === "-") {
+        result = Number(operand_1) - Number(operand_2);
+      } else if (operator === "*") {
+        result = Number(operand_1) * Number(operand_2);
+      } else if (operator === "/") {
+        result = Number(operand_1) / Number(operand_2);
+        console.log(result)
+      }
+      result = formatResult(result);
+      flag_do_replace = true
+
+    } else {
+      operand_1 = result
+      flag_do_replace = true
+      operator = value
     }
-    // set
+    setState({
+      result: result,
+      flag_do_replace: flag_do_replace,
+      operator: operator,
+      operand_1: operand_1,
+      operand_2: operand_2
+    })
   }
 
 
